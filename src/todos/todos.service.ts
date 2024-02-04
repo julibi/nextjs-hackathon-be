@@ -72,10 +72,4 @@ export class TodosService {
       await this.entityManager.save(todo);
     }
   }
-
-  async bulkDelete(ids: number[]) {
-    for (let i = 0; i < ids.length; i++) {
-      await this.todosRespository.delete({ id: ids[i] });
-    }
-  }
 }

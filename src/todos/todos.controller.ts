@@ -57,11 +57,6 @@ export class TodosController {
     return this.todosService.update(id, updateTodoDTO);
   }
 
-  @Delete('/bulk-delete')
-  async bulkDelete(@Body() ids: number[]) {
-    return this.todosService.bulkDelete(ids);
-  }
-
   @Delete(':id')
   async delete(@Param('id', ParseIntPipe) id: number) {
     return this.todosService.delete(id);
