@@ -1,0 +1,51 @@
+### Get all todos
+
+GET http://localhost:3000/todos/
+Accept: application/json
+X-API-KEY: {{api-key}}
+
+### Get top three todos
+
+GET http://localhost:3000/todos/top
+Accept: application/json
+X-API-KEY: {{api-key}}
+
+### Get todo by id
+
+GET http://localhost:3000/todos/0
+Accept: application/json
+X-API-KEY: {{api-key}}
+
+### Create a new todo
+
+POST http://localhost:3000/todos
+Content-Type: application/json
+X-API-KEY: {{api-key}}
+
+{
+  "title": "My todo item"
+}
+
+### Update an existing todo
+
+PATCH http://localhost:3000/todos/1
+Content-Type: application/json
+X-API-KEY: {{api-key}}
+
+{
+  "isCompleted": true
+}
+
+### Delete an existing todo
+
+DELETE http://localhost:3000/todos/1
+Content-Type: application/json
+X-API-KEY: {{api-key}}
+
+### Create a set of new todos
+
+POST http://localhost:3000/todos/bulk-create
+Content-Type: application/json
+X-API-KEY: {{api-key}}
+
+< todos.json
