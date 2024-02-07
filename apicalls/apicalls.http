@@ -4,6 +4,25 @@ GET http://localhost:3000/todos/
 Accept: application/json
 X-API-KEY: {{api-key}}
 
+### Get all completed todos
+
+GET http://localhost:3000/todos?isCompleted=true
+Accept: application/json
+X-API-KEY: {{api-key}}
+
+### Get todos by query
+
+GET http://localhost:3000/todos?q=40
+Accept: application/json
+X-API-KEY: {{api-key}}
+
+### Get todos by completed flag and query
+
+GET http://localhost:3000/todos?q=40&isCompleted=true
+Accept: application/json
+X-API-KEY: {{api-key}}
+
+
 ### Get top three todos
 
 GET http://localhost:3000/todos/top
@@ -28,7 +47,7 @@ X-API-KEY: {{api-key}}
 
 ### Update an existing todo
 
-PATCH http://localhost:3000/todos/1
+PATCH http://localhost:3000/todos/409
 Content-Type: application/json
 X-API-KEY: {{api-key}}
 

@@ -26,9 +26,8 @@ export class TodosController {
 
   @Get()
   async findAll(@Query() params: { [key: string]: any }) {
-    return Object.keys(params).length > 0
-      ? this.todosService.findByCompletionStatus(params.isCompleted)
-      : this.todosService.findAll();
+    const { isCompleted, q } = params;
+    return this.todosService.find({ isCompleted, q });
   }
 
   @Get('/top')
